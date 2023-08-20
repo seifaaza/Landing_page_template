@@ -1,6 +1,6 @@
-import fileType from 'file-type';
+import {fileTypeFromBuffer} from 'file-type';
 
-const exts = new Set([
+const extensions = new Set([
 	'7z',
 	'bz2',
 	'gz',
@@ -9,10 +9,12 @@ const exts = new Set([
 	'zip',
 	'xz',
 	'gz',
+	'zst',
 ]);
 
-// eslint-disable-next-line import/no-anonymous-default-export
-export default input => {
-	const type = fileType(input);
-	return exts.has(type && type.ext) ? type : null;
+const archiveType = async input => {
+	const type = await fileTypeFromBuffer(input);
+	return extensions.has(type?.ext) ? type : null;
 };
+
+export default archiveType;

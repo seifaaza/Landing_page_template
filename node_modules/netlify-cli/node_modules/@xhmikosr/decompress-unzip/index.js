@@ -2,7 +2,7 @@
 
 import {Buffer} from 'node:buffer';
 import {promisify} from 'node:util';
-import fileType from 'file-type';
+import {fileTypeFromBuffer} from 'file-type';
 import getStream from 'get-stream';
 import yauzl from 'yauzl';
 
@@ -75,16 +75,20 @@ const extractFile = zip => new Promise((resolve, reject) => {
 	zip.on('end', () => resolve(files));
 });
 
-const decompress = () => buf => {
-	if (!Buffer.isBuffer(buf)) {
-		return Promise.reject(new TypeError(`Expected a Buffer, got ${typeof buf}`));
+const decompressUnzip = () => async input => {
+	if (!Buffer.isBuffer(input)) {
+		throw new TypeError(`Expected a Buffer, got ${typeof input}`);
 	}
 
-	if (!fileType(buf) || fileType(buf).ext !== 'zip') {
-		return Promise.resolve([]);
+	if (Buffer.isBuffer(input)) {
+		const type = await fileTypeFromBuffer(input);
+
+		if (!type || type.ext !== 'zip') {
+			return [];
+		}
 	}
 
-	return promisify(yauzl.fromBuffer)(buf, {lazyEntries: true}).then(extractFile);
+	return promisify(yauzl.fromBuffer)(input, {lazyEntries: true}).then(extractFile);
 };
 
-export default decompress;
+export default decompressUnzip;

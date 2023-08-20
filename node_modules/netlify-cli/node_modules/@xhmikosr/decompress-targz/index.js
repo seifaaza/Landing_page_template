@@ -1,17 +1,20 @@
 import {Buffer} from 'node:buffer';
 import zlib from 'node:zlib';
 import decompressTar from '@xhmikosr/decompress-tar';
-import fileType from 'file-type';
+import {fileTypeFromBuffer} from 'file-type';
 import {isStream} from 'is-stream';
 
-// eslint-disable-next-line import/no-anonymous-default-export
-export default () => input => {
+const decompressTarGz = () => async input => {
 	if (!Buffer.isBuffer(input) && !isStream(input)) {
-		return Promise.reject(new TypeError(`Expected a Buffer or Stream, got ${typeof input}`));
+		throw new TypeError(`Expected a Buffer or Stream, got ${typeof input}`);
 	}
 
-	if (Buffer.isBuffer(input) && (!fileType(input) || fileType(input).ext !== 'gz')) {
-		return Promise.resolve([]);
+	if (Buffer.isBuffer(input)) {
+		const type = await fileTypeFromBuffer(input);
+
+		if (!type || type.ext !== 'gz') {
+			return [];
+		}
 	}
 
 	const unzip = zlib.createGunzip();
@@ -25,3 +28,5 @@ export default () => input => {
 
 	return result;
 };
+
+export default decompressTarGz;

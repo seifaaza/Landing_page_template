@@ -14,11 +14,11 @@ npm install @xhmikosr/archive-type
 
 ```js
 import archiveType from '@xhmikosr/archive-type';
-import readChunk from 'read-chunk';
+import {readChunk} from 'read-chunk';
 
-const buffer = readChunk.sync('unicorn.zip', 0, 262);
+const buffer = await readChunk('unicorn.zip', 0, 262);
 
-archiveType(buffer);
+await archiveType(buffer);
 //=> {ext: 'zip', mime: 'application/zip'}
 ```
 
@@ -51,6 +51,7 @@ It only needs the first 262 bytes.
 - `zip`
 - `xz`
 - `gz`
+- `zst`
 
 
 ## Related
