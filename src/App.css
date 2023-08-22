@@ -47,17 +47,21 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
+
 }
 
 img::selection {
   background-color: transparent;
+}
+p::selection, ::selection{
+  @apply bg-sky-400 text-white dark:text-black 
 }
 
 /**************************** Responsive design ****************************/
 .main-container {
   width: 100%;
   margin: 0% auto;
-  padding: 0.4rem 0.8rem;
+  /* padding: 0.4rem 0.8rem; */
 }
 
 @media (min-width: 640px) {
@@ -82,18 +86,16 @@ button{
   width: fit-content;
   padding: 0.7rem 1.6rem;
   border-radius: 50px;
-  border: white 1px solid;
   display: flex;
   align-items: center;
-  gap: .5rem;
-  @apply dark:hover:text-black
+  gap: .6rem;
 }
 .btn{
   background-color: white;
   color: var(--sky-600);
 }
 .main-btn{
-  color: white;
+
   position: relative;
   overflow: hidden;
 }
@@ -105,21 +107,18 @@ button{
   width: 150%;
   height: 40px;
   background-color: rgba(255, 255, 255, 0.371);
-  transform: rotate(-30deg);
+  transform: rotate(-45deg);
   animation: btn-brighting 4s ease-out infinite ;
 }
 @keyframes btn-brighting {
   20%{
-    right: calc(0% - 12rem);
+    right: calc(0% - 14rem);
   }
   100% {
-    right: calc(0% - 12rem);
+    right: calc(0% - 14rem);
   }
 }
-.main-btn:hover{
-  background-color: white;
-  color: var(--sky-600);
-}
+
 /**************************** Typography ****************************/
 
 /* Fonts */
@@ -157,18 +156,19 @@ button{
 }
 @media (min-width: 1024px) {
   .image-size {
-    width: calc(10rem + 3.5vw);
+    width: calc(12rem + 4.5vw);
   }
 }
 @media (min-width: 1280px) {
   .image-size {
-    width: 15rem;
+    width: 18rem;
   }
 }
 
 /**************************** Buttons ****************************/
 
 .cloud1{
+  opacity: .5;
   top: 80%;
   width: 8rem;
   animation: cloud1-moving 60s -15s linear infinite alternate-reverse;
@@ -178,7 +178,7 @@ button{
   100% {  left: calc(-0% - 11rem)}
 }
 .cloud2{
-  top: 70%;
+  top: 67%;
   left: calc(100% + 14rem);
   width: 12rem;
   animation: cloud2-moving 60s -3s linear infinite alternate;
@@ -237,3 +237,159 @@ button{
   width: 1rem;
   animation: star-shining 2s infinite linear alternate;
 }
+
+/**************************** Navbar ****************************/
+
+.nav-open{
+  width: 30px;
+  height: 30px;
+  position: relative;
+  transition: .1s;
+  margin: 10px 10px;
+  cursor: pointer;
+  display: inline-block;
+  @apply hover:scale-105 duration-100  cursor-pointer 
+}
+.nav-open span{
+  width: 5px;
+  height: 5px;
+  display: block;
+  border-radius: 5px;
+  position: absolute;
+  @apply bg-cyan-800 dark:bg-sky-400
+}
+
+.nav-open div:first-child span:nth-child(1){
+  left: 0;
+  top: 0;
+}
+.nav-open div:first-child span:nth-child(2){
+  left: 12px;
+  top: 0;
+}
+.nav-open span:nth-child(3){
+  right: 0;
+  top: 0;
+}
+.nav-open span:nth-child(4){
+  left: 0;
+  top: 12px;
+}
+.nav-open span:nth-child(5){
+  position: absolute;
+  left: 12px;
+  top: 12px;
+}
+.nav-open span:nth-child(6){
+  right: 0px;
+  top: 12px;
+}
+.nav-open span:nth-child(7){
+  left: 0px;
+  bottom: 0px;
+}
+.nav-open span:nth-child(8){
+  position: absolute;
+  left: 12px;
+  bottom: 0px;
+}
+.nav-open span:nth-child(9){
+  right: 0px;
+  bottom: 0px;
+}
+.nav-open div:last-child span:nth-child(1), .nav-open div:last-child span:nth-child(2){
+  position: absolute;
+  left: -10%;
+  bottom: 40%;
+  width: 130%;
+}
+.nav-open div:last-child span:nth-child(1){
+  transform: rotate(45deg);
+}
+.nav-open div:last-child span:nth-child(2){
+  transform: rotate(-45deg);
+}
+
+/**************************** About ****************************/
+
+.cloud-window{
+  opacity: .5;
+  top: 30%;
+  right: 100%;
+  width: 50%;
+  animation: cloud-window-moving 20s -1s linear infinite alternate;
+}
+@keyframes cloud-window-moving {
+  to {  right: -165%}
+}
+
+.window{
+  border-radius: 50%;
+}
+
+.delay1{
+  animation-delay: 10s;
+}
+.delay2{
+  animation-delay: 20s;
+}
+
+.star-window{
+  animation: star-shining 3s infinite linear alternate;
+}
+@keyframes star-window-shining {
+  0%   {     opacity: 1;}
+  100% {  opacity: 0;}
+}
+
+.MuiTimelineDot-filled{
+  @apply bg-sky-400 !important;
+}
+.MuiTimelineConnector-root{
+  @apply bg-sky-700 !important;
+}
+
+@media (min-width: 320px) { 
+  canvas{
+    height: 60px !important;
+    width: 60px !important;
+  }
+  .MuiTimelineItem-root::before{
+    display: none;
+  }
+ }
+ @media (min-width: 640px) { 
+  canvas{
+    height: 80px !important;
+    width: 80px !important;
+  }
+  }
+ @media (min-width: 1024px) { 
+  canvas{
+    height: 120px !important;
+    width: 120px !important;
+  }
+  .MuiTimelineItem-root::before{
+    display: block !important;
+  }
+
+  .MuiTimelineItem-missingOppositeContent:nth-of-type(even){
+    flex-direction: row-reverse !important;
+
+  }
+  .MuiTimelineItem-missingOppositeContent:nth-of-type(even) p {
+    text-align: right !important;
+  }
+  }
+ @media (min-width: 1440px) { 
+  canvas{
+    height: 140px !important;
+    width: 140px !important;
+  }
+  }
+  .ticket{
+    /* cursor:url("/assets/cursor.png"),  auto; */
+  }
+ 
+
+
