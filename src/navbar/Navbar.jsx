@@ -88,9 +88,8 @@ export default function Navbar() {
         </ul>
       </ul>
       <ul
-        className={`main-container flex justify-center items-center h-0 overflow-hidden duration-300 ${
-          store.navOpen ? "h-36 py-10" : ""
-        }`}
+        className={`main-container flex justify-center items-center h-0 overflow-hidden duration-300
+         ${store.navOpen ? "h-36 py-10" : ""}`}
       >
         <li>About</li>
         <li>Projects</li>

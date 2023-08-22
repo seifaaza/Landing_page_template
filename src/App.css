@@ -53,8 +53,9 @@ body {
 img::selection {
   background-color: transparent;
 }
-p::selection, ::selection{
+p::selection, h1::selection{
   @apply bg-sky-400 text-white dark:text-black 
+  
 }
 
 /**************************** Responsive design ****************************/
@@ -357,11 +358,17 @@ button{
   .MuiTimelineItem-root::before{
     display: none;
   }
+  .projects{
+    height: 450px
+  }
  }
  @media (min-width: 640px) { 
   canvas{
     height: 80px !important;
     width: 80px !important;
+  }
+  .projects{
+    height: 550px
   }
   }
  @media (min-width: 1024px) { 
@@ -372,6 +379,9 @@ button{
   .MuiTimelineItem-root::before{
     display: block !important;
   }
+  .projects{
+    height: 950px
+  }
 
   .MuiTimelineItem-missingOppositeContent:nth-of-type(even){
     flex-direction: row-reverse !important;
@@ -381,15 +391,120 @@ button{
     text-align: right !important;
   }
   }
- @media (min-width: 1440px) { 
+  @media (min-width: 1440px) { 
   canvas{
     height: 140px !important;
     width: 140px !important;
   }
+  .projects{
+    height: 1050px
   }
-  .ticket{
-    /* cursor:url("/assets/cursor.png"),  auto; */
   }
- 
-
-
+  
+  /**************************** Projects ****************************/
+  .projects div {
+    overflow: hidden;
+    cursor:url("/assets/cursor.png"),  auto;
+    background-size: cover;
+    position: relative;
+    transition: 300ms;
+  }
+  .projects div:hover {
+    transform: scale(1.01);
+  }
+  .projects div:nth-child(1){
+    background-image: url('/projects/e-commerce.png');
+  }
+  .projects div:nth-child(1):hover {
+    background-image: url('/projects/e-commerce2.png');
+  }
+  .projects div:hover::after{
+    position: absolute;
+    content: '';
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    height: 70%;
+  }
+  .projects div:nth-child(1):hover::after{
+    background-image: linear-gradient(to top, #6534e2d8 40%, transparent)
+  }
+  .projects div:nth-child(1):hover::before{
+    content: 'E-commerce Website';
+  }
+  .projects div:hover::before {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    font-family: var(--font-main);
+    z-index: 2;
+    color: white;
+    @apply text-xs p-3 tablet:text-lg tablet:p-4 laptop:text-2xl laptop:p-6
+  }
+  .projects div:hover:not(:nth-child(2)) .project-icon {
+   top: 80%;
+   z-index: 3;
+  }
+  .projects div:nth-child(5){
+    background-image: url('/projects/auth.png');
+  }
+  .projects div:nth-child(5):hover::after{
+    background-image: linear-gradient(to top, #5d68fbe2 40%, transparent)
+  }
+  .projects div:nth-child(5):hover::before{
+    content: 'Sign in and sign up';
+  }
+  .projects div:nth-child(2){
+    background-image: url('/projects/quick-bricolage.png');
+    background-position-y: 0%;
+  }
+  .projects div:nth-child(2):hover {
+    background-position-y: 50%;
+  }
+  .projects div:nth-child(2):hover::after{
+    background-image: linear-gradient(to top, #f0760cd0 40%, transparent)
+  }
+  .projects div:nth-child(2):hover::before{
+    content: 'E-commerce website';
+    max-width: 60%;
+  }
+  .projects div:nth-child(2):hover .project-icon {
+    top: 90%;
+    z-index: 3;
+   }
+  .projects div:nth-child(3){
+    background-image: url('/projects/business.png');
+    background-position-y: 80%;
+  }
+  .projects div:nth-child(3):hover {
+    background-position-y: 0%;
+  }
+  .projects div:nth-child(3):hover::after{
+    background-image: linear-gradient(to top, #9fcbf2df 40%, transparent)
+  }
+  .projects div:nth-child(3):hover::before{
+    content: 'Sign in and sign up';
+  }
+  .projects div:nth-child(3):hover .project-icon {
+    top: 90%;
+    z-index: 3;
+   }
+  .projects div:nth-child(4){
+    background-image: url('/projects/hello-world2.png');
+    background-position-y: 80%;
+  }
+  .projects div:nth-child(4):hover {
+    background-position-y: 0%;
+  }
+  .projects div:nth-child(4):hover::after{
+    background-image: linear-gradient(to top, #6f28d9d5 40%, transparent)
+  }
+  .projects div:nth-child(4):hover::before{
+    content: 'Freelance web app';
+    max-width: 60%;
+  }
+  .projects div:nth-child(4):hover .project-icon {
+    top: 78%;
+    z-index: 3;
+   }
+   

@@ -9,10 +9,16 @@ export default function HeaderContent() {
       <p className=" font-medium text-small-heading laptop:max-w-xl font-main text-white dark:text-slate-300 ">
         I am AAZA Seifeddine, a full-stack web developer based in morocco
       </p>
-      <button className="main-btn text-center laptop:text-left text-white border border-white hover:bg-white hover:text-sky-500 dark:hover:text-black">
-        <span>Let{"'"}s Fly</span>
-        <ArrowRightOutlined />
-      </button>
+
+      <a href="mailto:seifeddine.aaza@gmail.com">
+        <button
+          href="mailto:seifeddine.aaza@gmail.com"
+          className="main-btn text-center laptop:text-left text-white border border-white hover:bg-white hover:text-sky-500 dark:hover:text-black"
+        >
+          <span>Let{"'"}s Talk</span>
+          <ArrowRightOutlined />
+        </button>
+      </a>
     </div>
   );
 }
