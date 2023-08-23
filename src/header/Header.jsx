@@ -22,6 +22,7 @@ export default function Header() {
 
   return (
     <div
+      id="header"
       style={{ height: "780px" }}
       className="bg-gradient-to-t from-sky-600 to-sky-300 dark:from-slate-950 dark:to-slate-900 relative"
     >

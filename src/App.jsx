@@ -8,6 +8,9 @@ import Projects from "./projects/Projects";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Skills from "./skills/Skills";
+import Contact from "./contact/Contact";
+import Footer from "./footer/Footer";
 
 function App() {
   useEffect(() => {
@@ -22,7 +25,10 @@ function App() {
       <Navbar />
       <Header />
       <About />
+      <Skills />
       <Projects />
+      <Contact />
+      <Footer />
     </>
   );
 }

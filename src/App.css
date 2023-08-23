@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;800;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;800;900&display=swap');
 :root {
   
   /* fonts family */
@@ -34,6 +33,10 @@
   /* Trasnition */
   --hover-transition: 200ms ease-out;
   --animation-transition: 350ms ease-out;
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 * {
@@ -84,6 +87,8 @@ p::selection, h1::selection{
 /**************************** Buttons ****************************/
 
 button{
+  font-family: var(--font-main);
+  font-weight: 600;
   width: fit-content;
   padding: 0.7rem 1.6rem;
   border-radius: 50px;
@@ -197,7 +202,7 @@ button{
 
 @keyframes plane-flying {
   0%   {    top: 60%;    left: -100%;}
-  100% {   top: 85%;   left: 100%}
+  100% {   top: 88%;   left: 100%}
 }
 .plane2{
   top: 90%;
@@ -508,3 +513,6 @@ button{
     z-index: 3;
    }
    
+ /**************************** Projects ****************************/
+
+ 

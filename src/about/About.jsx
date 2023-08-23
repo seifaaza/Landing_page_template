@@ -9,15 +9,15 @@ import { ArrowDownOutlined } from "@ant-design/icons";
 
 export default function About() {
   return (
-    <div className=" bg-gradient-to-b from-white to-sky-200 dark:from-slate-700 dark:to-slate-900 flex flex-col py-14 pt-24">
+    <div
+      id="about"
+      className=" bg-gradient-to-b from-white to-sky-200 dark:from-slate-700 dark:to-slate-900 flex flex-col py-14 pt-24"
+    >
       <div className="p-3  main-container flex flex-col gap-8 tablet:gap-10 laptop:gap-16 justify-center items-center">
         <h1 className="text-5xl tablet:text-6xl laptop:text-7xl font-main font-bold bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-sky-600">
           About Me
         </h1>
-        <div
-          // data-aos="flip-down"
-          className="ticket flex h-32 max-w-3xl tablet:max-w-full tablet:h-40 laptop:h-64 tablet:w-4/5 rotate-2 my-8 overflow-hidden"
-        >
+        <div className="ticket flex h-32 max-w-3xl tablet:max-w-full tablet:h-40 laptop:h-64 tablet:w-4/5 rotate-2 my-8 overflow-hidden">
           <div className="w-2/12 h-full shadow-md rounded-md tablet:rounded-xl bg-gradient-to-tr from-sky-500 to-sky-400 relative">
             <div className="absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 h-full w-full flex gap-1 tablet:gap-2 laptop:gap-5 items-center justify-center -rotate-90">
               <img
