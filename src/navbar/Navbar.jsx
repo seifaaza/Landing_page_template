@@ -2,11 +2,19 @@ import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import { useEffect, useRef } from "react";
 import mainStore from "../store/mainStore";
+import { useState } from "react";
+import { ArrowRightOutlined } from "@ant-design/icons";
 
 export default function Navbar() {
+  const [showCTA, setShowCTA] = useState(false);
   const store = mainStore();
 
   let menuRef = useRef();
+
+  const show = () => {
+    window.scrollY >= 600 ? setShowCTA(true) : setShowCTA(false);
+  };
+  window.addEventListener("scroll", show);
 
   useEffect(() => {
     if (store.theme === "dark") {
@@ -89,6 +97,19 @@ export default function Navbar() {
               <span></span>
             </div>
           </li>
+          {showCTA ? (
+            <li>
+              <button
+                onClick={() => store.openTalk()}
+                className="main-btn text-center laptop:text-left bg-sky-500 text-white "
+              >
+                <span>Let{"'"}s Talk</span>
+                <ArrowRightOutlined />
+              </button>
+            </li>
+          ) : (
+            ""
+          )}
         </ul>
       </ul>
       <ul

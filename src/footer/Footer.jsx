@@ -10,10 +10,18 @@ export default function Footer() {
             </h1>
           </div>
           <div className="flex gap-4">
-            <img className="h-8" src="/assets/github.png" alt="" />
-            <img className="h-8" src="/assets/linkedin.png" alt="" />
-            <img className="h-8" src="/assets/figma.png" alt="" />
-            <img className="h-8" src="/assets/dribbble.png" alt="" />
+            <a href="https://github.com/seifaaza">
+              <img className="h-8" src="/assets/github.png" alt="" />
+            </a>
+            <a href="https://www.linkedin.com/in/seifeddine-aaza-6813b0248/">
+              <img className="h-8" src="/assets/linkedin.png" alt="" />
+            </a>
+            <a href="https://www.figma.com/@seifaaza">
+              <img className="h-8" src="/assets/figma.png" alt="" />
+            </a>
+            <a href="https://dribbble.com/seifAz">
+              <img className="h-8" src="/assets/dribbble.png" alt="" />
+            </a>
           </div>
         </div>
       </div>

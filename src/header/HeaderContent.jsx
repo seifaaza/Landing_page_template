@@ -28,7 +28,7 @@ export default function HeaderContent() {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box className="p-4 tablet:p-6 laptop:p-8 bg-white/40 desktop:p-10 desktop:px-16 absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 dark:bg-slate-900  backdrop-blur-lg rounded-xl">
+        <Box className="p-4 tablet:p-6 laptop:p-8 desktop:p-10 bg-white/20 dark:bg-white/10 desktop:px-16 absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4  backdrop-blur-lg rounded-xl">
           <Talk />
         </Box>
       </Modal>

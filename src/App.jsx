@@ -16,7 +16,7 @@ import { useState } from "react";
 function App() {
   const [showArrowUp, setShowArrowUp] = useState(false);
   const show = () => {
-    window.scrollY >= 1000 ? setShowArrowUp(true) : setShowArrowUp(false);
+    window.scrollY >= 1200 ? setShowArrowUp(true) : setShowArrowUp(false);
   };
   window.addEventListener("scroll", show);
   const arrowUp = () => {
@@ -44,7 +44,7 @@ function App() {
       <Footer />
 
       <img
-        src="/public/assets/scroll-to-top.svg"
+        src="/assets/scroll-to-top.svg"
         className={`${
           showArrowUp ? "" : "block"
         }fixed right-5 bottom-10 w-10 z-40 opacity-50 hover:mb-2 hover:opacity-100 duration-700 ease-in-out cursor-pointer tablet:w-12 laptop:right-14 desktop:w-16 desktop:right-16`}
