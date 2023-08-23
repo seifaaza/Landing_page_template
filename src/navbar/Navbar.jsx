@@ -92,11 +92,15 @@ export default function Navbar() {
         </ul>
       </ul>
       <ul
-        className={`main-container flex flex-col laptop:flex-row justify-around items-center h-0 overflow-hidden duration-300
+        className={`main-container flex flex-col gap-2 laptop:flex-row justify-around items-center h-0 overflow-hidden duration-300
          ${store.navOpen ? "h-96 laptop:h-36 py-14" : ""}`}
       >
-        <li className="py-2 cursor-pointer px-8 flex gap-4 justify-center items-center">
-          <a href="#about" onClick={() => store.navClose()}>
+        <li>
+          <a
+            className="py-2 cursor-pointer px-8 flex gap-4 justify-center items-center"
+            href="#about"
+            onClick={() => store.navClose()}
+          >
             <svg
               className="h-8 fill-sky-700 dark:fill-sky-600"
               id="Layer_1"
@@ -122,8 +126,12 @@ export default function Navbar() {
             </span>
           </a>
         </li>
-        <li className="py-2 cursor-pointer px-8 flex gap-4">
-          <a href="#skills" onClick={() => store.navClose()}>
+        <li>
+          <a
+            className="py-2 cursor-pointer px-8 flex gap-4 justify-center items-center"
+            href="#skills"
+            onClick={() => store.navClose()}
+          >
             <svg
               className="h-8 fill-sky-700 dark:fill-sky-600"
               id="Layer_1"
@@ -141,8 +149,12 @@ export default function Navbar() {
             </span>
           </a>
         </li>
-        <li className="py-2 cursor-pointer px-8 flex gap-4">
-          <a href="#projects" onClick={() => store.navClose()}>
+        <li>
+          <a
+            className="py-2 cursor-pointer px-8 flex gap-4 justify-center items-center"
+            href="#projects"
+            onClick={() => store.navClose()}
+          >
             <svg
               className="h-8 fill-sky-700 dark:fill-sky-600"
               id="Layer_1"
@@ -160,9 +172,12 @@ export default function Navbar() {
             </span>
           </a>
         </li>
-
-        <li className="py-2 cursor-pointer px-8 flex gap-4">
-          <a href="#contact" onClick={() => store.navClose()}>
+        <li>
+          <a
+            className="py-2 cursor-pointer px-8 flex gap-4 justify-center items-center"
+            href="#contact"
+            onClick={() => store.navClose()}
+          >
             <svg
               className="h-8 fill-sky-700 dark:fill-sky-600"
               id="Layer_1"
