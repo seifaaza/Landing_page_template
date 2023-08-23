@@ -86,7 +86,7 @@ p::selection, h1::selection{
 
 /**************************** Buttons ****************************/
 
-button{
+button, .button{
   font-family: var(--font-main);
   font-weight: 600;
   width: fit-content;
@@ -513,6 +513,17 @@ button{
     z-index: 3;
    }
    
- /**************************** Projects ****************************/
+ /**************************** Contact ****************************/
+.MuiFormLabel-root, .MuiOutlinedInput-notchedOutline, .MuiInputLabel-root, .MuiInputBase-input{
+  font-family: var(--font-main) !important;
+  @apply dark:text-white text-dark !important;
+}
+.css-yjsfm1 span {
+  width: fit-content !important; 
+  font-family: var(--font-main) !important;
+  color: var(--sky-600) !important;
+}
+.MuiOutlinedInput-notchedOutline{
+  border: #0085c7 1px solid !important;
+}
 
- 

@@ -102,7 +102,7 @@ export default function Navbar() {
             onClick={() => store.navClose()}
           >
             <svg
-              className="h-8 fill-sky-700 dark:fill-sky-600"
+              className="h-8 fill-sky-700 dark:fill-sky-500"
               id="Layer_1"
               data-name="Layer 1"
               xmlns="http://www.w3.org/2000/svg"
@@ -121,7 +121,7 @@ export default function Navbar() {
                 d="M435.29,435.84,393.4,214.73,314.45,280l93.32,185.59c2.29,4.55,8.25,5.77,11.64,2.38l9.09-9.09A25.56,25.56,0,0,0,435.29,435.84Z"
               />
             </svg>{" "}
-            <span className=" font-main text-sky-700 dark:text-sky-600 font-bold text-2xl">
+            <span className=" font-main text-sky-700 dark:text-sky-500 font-bold text-2xl">
               About
             </span>
           </a>
@@ -133,7 +133,7 @@ export default function Navbar() {
             onClick={() => store.navClose()}
           >
             <svg
-              className="h-8 fill-sky-700 dark:fill-sky-600"
+              className="h-8 fill-sky-700 dark:fill-sky-500"
               id="Layer_1"
               data-name="Layer 1"
               xmlns="http://www.w3.org/2000/svg"
@@ -144,7 +144,7 @@ export default function Navbar() {
                 points="93.65 0 93.65 79.76 381.54 79.76 0 461.3 56.4 517.7 437.94 136.16 437.94 424.05 517.7 424.05 517.7 0 93.65 0"
               />
             </svg>
-            <span className=" font-main text-sky-700 dark:text-sky-600 font-bold text-2xl justify-center items-center">
+            <span className=" font-main text-sky-700 dark:text-sky-500 font-bold text-2xl justify-center items-center">
               Skills
             </span>
           </a>
@@ -156,7 +156,7 @@ export default function Navbar() {
             onClick={() => store.navClose()}
           >
             <svg
-              className="h-8 fill-sky-700 dark:fill-sky-600"
+              className="h-8 fill-sky-700 dark:fill-sky-500"
               id="Layer_1"
               data-name="Layer 1"
               xmlns="http://www.w3.org/2000/svg"
@@ -167,7 +167,7 @@ export default function Navbar() {
                 points="93.65 0 93.65 79.76 381.54 79.76 0 461.3 56.4 517.7 437.94 136.16 437.94 424.05 517.7 424.05 517.7 0 93.65 0"
               />
             </svg>
-            <span className=" font-main text-sky-700 dark:text-600 dark:text-white font-bold text-2xl justify-center items-center">
+            <span className=" font-main text-sky-700 dark:text-sky-500 font-bold text-2xl justify-center items-center">
               Projects
             </span>
           </a>
@@ -179,7 +179,7 @@ export default function Navbar() {
             onClick={() => store.navClose()}
           >
             <svg
-              className="h-8 fill-sky-700 dark:fill-sky-600"
+              className="h-8 fill-sky-700 dark:fill-sky-500"
               id="Layer_1"
               data-name="Layer 1"
               xmlns="http://www.w3.org/2000/svg"
@@ -190,7 +190,7 @@ export default function Navbar() {
                 points="278.64 0 217.02 61.63 353.18 197.78 0 197.78 0 284.93 353.18 284.93 217.02 421.09 278.64 482.71 520 241.36 278.64 0"
               />
             </svg>{" "}
-            <span className=" font-main text-sky-700 dark:text-sky-600 font-bold text-2xl">
+            <span className=" font-main text-sky-700 dark:text-sky-500 font-bold text-2xl">
               Contact
             </span>
           </a>

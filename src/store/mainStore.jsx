@@ -4,7 +4,18 @@ const mainStore = create((set) => ({
   theme: "light",
   navOpen: false,
   scroll: "",
+  talk: false,
 
+  openTalk: () => {
+    set({
+      talk: true,
+    });
+  },
+  closeTalk: () => {
+    set({
+      talk: false,
+    });
+  },
   darkMode: () => {
     set({
       theme: "dark",
