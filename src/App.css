@@ -153,21 +153,21 @@ button{
 
 /* Images */
 .image-size {
-  width: calc(150px + 8vw);
+  width: calc(250px + 8vw);
 }
 @media (min-width: 640px) {
   .image-size {
-    width: calc(10rem + 3.5vw);
+    width: calc(14rem + 3.5vw);
   }
 }
 @media (min-width: 1024px) {
   .image-size {
-    width: calc(12rem + 4.5vw);
+    width: calc(16rem + 5vw);
   }
 }
 @media (min-width: 1280px) {
   .image-size {
-    width: 18rem;
+    width: calc(20rem + 4vw);
   }
 }
 

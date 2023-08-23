@@ -78,9 +78,9 @@ export default function Header() {
           className="absolute right-10 tablet:right-20 bottom-0 w-3/4 tablet:w-2/4 laptop:right-0 laptop:w-1/3 dark:brightness-75"
         />
         <img
-          src="/assets/pilot.svg"
+          src="/assets/piloteT.svg"
           alt=""
-          className="image-size absolute bottom-0 right-2/4 laptop:right-48  "
+          className="image-size absolute bottom-0 right-1/4 tablet:right-2/4 laptop:right-48 desktop:right-40  "
         />
         <HeaderContent />
       </div>
