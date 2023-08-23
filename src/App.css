@@ -2,7 +2,7 @@
 :root {
   
   /* fonts family */
-  --font-title: "Dela Gothic One", cursive;
+  --font-title: "Dela Gothic One", 'Montserrat';
   --font-main:'Montserrat', sans-serif;
 
   /* font weight */
