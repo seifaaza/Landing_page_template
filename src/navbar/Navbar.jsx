@@ -6,15 +6,21 @@ import { useState } from "react";
 import { ArrowRightOutlined } from "@ant-design/icons";
 
 export default function Navbar() {
-  const [showCTA, setShowCTA] = useState(false);
   const store = mainStore();
 
   let menuRef = useRef();
 
+  const [showCTA, setShowCTA] = useState(false);
   const show = () => {
     window.scrollY >= 600 ? setShowCTA(true) : setShowCTA(false);
   };
   window.addEventListener("scroll", show);
+
+  const [navColor, setNavColor] = useState("transparent");
+  const navColorize = () => {
+    window.scrollY > 0 ? setNavColor("colorized") : setNavColor("transparent");
+  };
+  window.addEventListener("scroll", navColorize);
 
   useEffect(() => {
     if (store.theme === "dark") {
@@ -39,9 +45,14 @@ export default function Navbar() {
   return (
     <div
       ref={menuRef}
-      className={`          ${
+      className={`${
         store.navOpen ? " shadow-lg duration-200" : ""
-      } w-full fixed z-50 top-0 left-0 backdrop-blur-md bg-white/20 dark:bg-white/5 `}
+      } w-full fixed z-50 top-0 left-0 
+        ${
+          navColor == "transparent" && !store.navOpen
+            ? "bg-transparent"
+            : "bg-sky-300 dark:bg-slate-900 duration-200"
+        }`}
     >
       <ul className=" main-container p-3 flex justify-between items-center ">
         <li>

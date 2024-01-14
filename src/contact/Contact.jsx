@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <div
       id="contact"
-      className=" bg-gradient-to-b to-sky-200 from-sky-100 dark:to-slate-800 dark:from-slate-900 flex flex-col py-4 tablet:py-14"
+      className="bg-gradient-to-b from-sky-100 to-white dark:from-slate-950 dark:to-slate-800 flex flex-col py-4 tablet:py-14"
     >
       <div className="p-3  main-container flex flex-col gap-8 tablet:gap-10 laptop:gap-16 justify-center items-center">
         <h1
