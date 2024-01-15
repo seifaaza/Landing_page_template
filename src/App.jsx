@@ -13,6 +13,7 @@ import Footer from "./footer/Footer";
 import { useState } from "react";
 import Reviews from "./reviews/Reviews";
 import Collaborators from "./collaborators/Collaborators";
+import WindowsAnimation from "./WindowsAnimation";
 
 function App() {
   const [showArrowUp, setShowArrowUp] = useState(false);
@@ -39,6 +40,7 @@ function App() {
       <Navbar />
       <Header />
       <Reviews />
+      <WindowsAnimation />
       <Trips />
       <About />
       <Collaborators />
