@@ -15,7 +15,7 @@ export default function About() {
     >
       <div className="p-3  main-container flex flex-col gap-8 tablet:gap-10 laptop:gap-16 justify-center items-center">
         <h1 className="text-5xl tablet:text-6xl laptop:text-7xl font-main font-bold bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-sky-600">
-          About Me
+          About Us
         </h1>
         <div className="ticket flex h-32 max-w-3xl tablet:max-w-full tablet:h-40 laptop:h-64 tablet:w-4/5 rotate-2 my-8 overflow-hidden">
           <div className="w-2/12 h-full shadow-md rounded-md tablet:rounded-xl bg-gradient-to-tr from-sky-500 to-sky-400 relative">
@@ -26,7 +26,7 @@ export default function About() {
                 alt=""
               />
               <h1 className="text-xs laptop:text-xl font-title text-white text-center">
-                Seif Airways
+                Sky Airways
               </h1>
             </div>
           </div>

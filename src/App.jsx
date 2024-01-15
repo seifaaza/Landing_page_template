@@ -8,10 +8,11 @@ import Projects from "./projects/Projects";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Skills from "./skills/Skills";
 import Contact from "./contact/Contact";
 import Footer from "./footer/Footer";
 import { useState } from "react";
+import Reviews from "./reviews/Reviews";
+import Collaborators from "./collaborators/Collaborators";
 
 function App() {
   const [showArrowUp, setShowArrowUp] = useState(false);
@@ -37,8 +38,9 @@ function App() {
     <div className="relative">
       <Navbar />
       <Header />
+      <Collaborators />
+      <Reviews />
       <About />
-      <Skills />
       <Projects />
       <Contact />
       <Footer />

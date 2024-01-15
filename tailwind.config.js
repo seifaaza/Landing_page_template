@@ -7,8 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        main: ['Montserrat', 'sans-serif'],
-        title: ['Dela Gothic One', 'cursive']
+        title: ['Krona One', 'sans-serif'],
+        main: ['Nunito', 'sans-serif'],
       },
       colors: {
         'dark': '#0d111a',

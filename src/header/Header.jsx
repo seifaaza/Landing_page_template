@@ -23,8 +23,8 @@ export default function Header() {
   return (
     <div
       id="header"
-      style={{ height: "780px" }}
-      className="bg-gradient-to-t from-sky-600 to-sky-300 dark:from-slate-950 dark:to-slate-900 relative"
+      style={{ height: "720px" }}
+      className="bg-gradient-to-t from-sky-600 to-sky-300 dark:from-slate-950 dark:to-slate-900 relative "
     >
       <img
         src="/assets/cloud.svg"
@@ -39,7 +39,14 @@ export default function Header() {
       <img
         src="/assets/moon.svg"
         alt=""
-        className="w-12 top-24 right-20 tablet:w-16 laptop:top-28 laptop:right-48 invisible dark:visible absolute drop-shadow-xl shadow-white "
+        className="w-12 top-24 right-10 tablet:w-16 laptop:top-28 laptop:right-48 
+        invisible tablet:dark:visible absolute drop-shadow-xl shadow-white "
+      />{" "}
+      <img
+        src="/assets/sun.svg"
+        alt=""
+        className="w-12 top-24 right-10 tablet:w-16 laptop:top-28 laptop:right-48 
+        invisible tablet:visible tablet:dark:invisible absolute drop-shadow-2xl shadow-yellow-300 "
       />{" "}
       <img
         src="/assets/star.svg"
@@ -78,9 +85,9 @@ export default function Header() {
           className="absolute right-10 tablet:right-20 bottom-0 w-3/4 tablet:w-2/4 laptop:right-0 laptop:w-1/3 dark:brightness-75"
         />
         <img
-          src="/assets/piloteT.svg"
+          src="/assets/pilote.svg"
           alt=""
-          className="image-size absolute bottom-0 right-1/4 tablet:right-2/4 laptop:right-48 desktop:right-40  "
+          className="image-size absolute bottom-0 right-1/4 laptop:right-32 desktop:right-48"
         />
         <HeaderContent />
       </div>

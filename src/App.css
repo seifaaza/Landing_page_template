@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Nunito:wght@200;400;600&display=swap');
 :root {
   
   /* fonts family */
-  --font-title: "Dela Gothic One", 'Montserrat';
-  --font-main:'Montserrat', sans-serif;
+  --font-title:'Krona One', sans-serif;
+  --font-main: 'Nunito', sans-serif;
 
   /* font weight */
   --font-thin: 200;
@@ -61,7 +61,7 @@ p::selection, h1::selection{
   
 }
 
-/**************************** Responsive design ****************************/
+/**************************** Responsiveness ****************************/
 .main-container {
   width: 100%;
   margin: 0% auto;
@@ -137,7 +137,7 @@ button, .button{
 
 /* Heading paragraph sizing */
 .text-small-heading {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 
 }
 @media (min-width: 640px) {
@@ -145,19 +145,15 @@ button, .button{
     font-size: calc(1.3rem + 0.2vw);
   }
 }
-@media (min-width: 1024px) {
-  .text-small-heading {
-    font-size: calc(1.2rem + 0.2vw);
-  }
-}
 
-/* Images */
+/**************************** illustrations ****************************/
+
 .image-size {
-  width: calc(250px + 8vw);
+  width: calc(200px + 5vw);
 }
 @media (min-width: 640px) {
   .image-size {
-    width: calc(14rem + 3.5vw);
+    width: calc(13rem + 3vw);
   }
 }
 @media (min-width: 1024px) {
@@ -167,11 +163,9 @@ button, .button{
 }
 @media (min-width: 1280px) {
   .image-size {
-    width: calc(20rem + 4vw);
+    width: calc(20rem + 2vw);
   }
 }
-
-/**************************** Buttons ****************************/
 
 .cloud1{
   opacity: .5;
