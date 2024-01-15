@@ -4,7 +4,7 @@ import About from "./about/About";
 import Header from "./header/Header";
 import "./index.css";
 import Navbar from "./navbar/Navbar";
-import Projects from "./projects/Projects";
+import Trips from "./trips/Trips";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -38,10 +38,10 @@ function App() {
     <div className="relative">
       <Navbar />
       <Header />
-      <Collaborators />
       <Reviews />
+      <Trips />
       <About />
-      <Projects />
+      <Collaborators />
       <Contact />
       <Footer />
 

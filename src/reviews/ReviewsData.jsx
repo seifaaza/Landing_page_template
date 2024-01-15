@@ -4,7 +4,7 @@ const reviews = [
     photo: "seifeddine.jpg",
     city: "Casablanca",
     review:
-      "Wow... Je suis très satisfait, il n'y a eu aucun problème. Quick Bricolage toujours le meilleur. Bon courage",
+      "Wow... I'm very satisfied, there were no problems. Sky Airways always the best. Good luck",
     rating: "4.2",
   },
   {
@@ -12,7 +12,7 @@ const reviews = [
     photo: "sara.jpg",
     city: "Rabat",
     review:
-      "Le service est vraiment impeccable, sympa et ponctuelle. Je recommande vivement, Merci",
+      "The service is truly impeccable, friendly and punctual. I highly recommend, Thank you",
     rating: "4.5",
   },
   {
@@ -20,7 +20,7 @@ const reviews = [
     photo: "mohamed.jpg",
     city: "Agadir",
     review:
-      "a personne envoyée est sympathique et professionnelle et surtout que le résultat a été envoyé rapidement",
+      "The service is genuinely outstanding, characterized by friendliness and punctuality. I wholeheartedly recommend it.",
     rating: "5.1",
   },
 ];

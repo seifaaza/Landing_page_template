@@ -93,7 +93,7 @@ export default function Header() {
       </div>
       <svg
         style={{ transitionProperty: "left" }}
-        className={`absolute fill-white dark:fill-slate-700
+        className={`absolute fill-white dark:fill-slate-800
       ${scroll == "scrolling-down" ? "-left-6 tablet:-left-16 " : "-left-0"}
        -bottom-1 w-8/12 tablet:w-7/12 duration-1000 delay-150 ease-out 
       `}
@@ -118,7 +118,7 @@ export default function Header() {
       </svg>
       <svg
         style={{ transitionProperty: "right" }}
-        className={`absolute fill-white  dark:fill-slate-700
+        className={`absolute fill-white  dark:fill-slate-800
        ${
          scroll == "scrolling-down"
            ? "right-28 tablet:right-52 "
@@ -140,7 +140,7 @@ export default function Header() {
       </svg>
       <svg
         style={{ transitionProperty: "right" }}
-        className={`absolute fill-white  dark:fill-slate-700
+        className={`absolute fill-white  dark:fill-slate-800
         ${
           scroll == "scrolling-down" ? "-right-6 tablet:-right-10 " : "-right-0"
         }

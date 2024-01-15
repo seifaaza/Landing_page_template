@@ -1,6 +1,5 @@
 import ReviewsItem from "./ReviewsItem";
 import ReviewsData from "./ReviewsData";
-import Rating from "@mui/material/Rating";
 
 export default function Reviews() {
   const ReviewsItems = () => {
@@ -21,12 +20,12 @@ export default function Reviews() {
   return (
     <div
       id="reviews"
-      className="bg-gradient-to-b to-sky-100 from-white dark:from-slate-800 dark:to-slate-950 flex flex-col py-4 tablet:py-14"
+      className="bg-gradient-to-b to-sky-50 from-white dark:from-slate-800 dark:to-slate-950 flex flex-col pb-4 pt-10 tablet:pt-16 laptop:pt-24 desktop:pt-28 tablet:pb-10"
     >
-      <div className="p-3  main-container flex flex-col gap-8 tablet:gap-10 laptop:gap-16 justify-center items-center">
+      <div className="p-3 main-container flex flex-col gap-10 tablet:gap-12 justify-center items-center">
         <h1
           style={{ lineHeight: "1.1" }}
-          className="text-5xl tablet:text-6xl laptop:text-7xl font-main font-bold bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-sky-600"
+          className="text-5xl tablet:text-6xl laptop:text-7xl font-main font-bold bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-sky-500"
         >
           What Our Clients Say
         </h1>

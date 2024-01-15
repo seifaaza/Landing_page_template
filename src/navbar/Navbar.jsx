@@ -51,7 +51,7 @@ export default function Navbar() {
         ${
           navColor == "transparent" && !store.navOpen
             ? "bg-transparent"
-            : "bg-sky-300 dark:bg-slate-900 duration-200"
+            : "bg-sky-300 dark:bg-slate-950 duration-200"
         }`}
     >
       <ul className=" main-container p-3 flex justify-between items-center ">
@@ -110,11 +110,8 @@ export default function Navbar() {
           </li>
           {showCTA ? (
             <li>
-              <button
-                onClick={() => store.openTalk()}
-                className="main-btn text-center laptop:text-left bg-sky-500 text-white "
-              >
-                <span>Let{"'"}s Talk</span>
+              <button className="main-btn text-center laptop:text-left bg-sky-500 text-white ">
+                <span>Book now</span>
                 <ArrowRightOutlined />
               </button>
             </li>
@@ -130,7 +127,7 @@ export default function Navbar() {
         <li>
           <a
             className="py-2 cursor-pointer px-8 flex gap-4 justify-center items-center"
-            href="#about"
+            href="#reviews"
             onClick={() => store.navClose()}
           >
             <svg
@@ -154,53 +151,53 @@ export default function Navbar() {
               />
             </svg>{" "}
             <span className=" font-main text-sky-700 dark:text-sky-500 font-bold text-2xl">
+              Reviews
+            </span>
+          </a>
+        </li>
+        <li>
+          <a
+            className="py-2 cursor-pointer px-8 flex gap-4 justify-center items-center"
+            href="#plans"
+            onClick={() => store.navClose()}
+          >
+            <svg
+              className="h-8 fill-sky-700 dark:fill-sky-500"
+              id="Layer_1"
+              data-name="Layer 1"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 517.7 517.7"
+            >
+              <polygon
+                className="cls-1"
+                points="93.65 0 93.65 79.76 381.54 79.76 0 461.3 56.4 517.7 437.94 136.16 437.94 424.05 517.7 424.05 517.7 0 93.65 0"
+              />
+            </svg>
+            <span className=" font-main text-sky-700 dark:text-sky-500 font-bold text-2xl justify-center items-center">
+              Plans
+            </span>
+          </a>
+        </li>
+        <li>
+          <a
+            className="py-2 cursor-pointer px-8 flex gap-4 justify-center items-center"
+            href="#about"
+            onClick={() => store.navClose()}
+          >
+            <svg
+              className="h-8 fill-sky-700 dark:fill-sky-500"
+              id="Layer_1"
+              data-name="Layer 1"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 517.7 517.7"
+            >
+              <polygon
+                className="cls-1"
+                points="93.65 0 93.65 79.76 381.54 79.76 0 461.3 56.4 517.7 437.94 136.16 437.94 424.05 517.7 424.05 517.7 0 93.65 0"
+              />
+            </svg>
+            <span className=" font-main text-sky-700 dark:text-sky-500 font-bold text-2xl justify-center items-center">
               About
-            </span>
-          </a>
-        </li>
-        <li>
-          <a
-            className="py-2 cursor-pointer px-8 flex gap-4 justify-center items-center"
-            href="#skills"
-            onClick={() => store.navClose()}
-          >
-            <svg
-              className="h-8 fill-sky-700 dark:fill-sky-500"
-              id="Layer_1"
-              data-name="Layer 1"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 517.7 517.7"
-            >
-              <polygon
-                className="cls-1"
-                points="93.65 0 93.65 79.76 381.54 79.76 0 461.3 56.4 517.7 437.94 136.16 437.94 424.05 517.7 424.05 517.7 0 93.65 0"
-              />
-            </svg>
-            <span className=" font-main text-sky-700 dark:text-sky-500 font-bold text-2xl justify-center items-center">
-              Skills
-            </span>
-          </a>
-        </li>
-        <li>
-          <a
-            className="py-2 cursor-pointer px-8 flex gap-4 justify-center items-center"
-            href="#projects"
-            onClick={() => store.navClose()}
-          >
-            <svg
-              className="h-8 fill-sky-700 dark:fill-sky-500"
-              id="Layer_1"
-              data-name="Layer 1"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 517.7 517.7"
-            >
-              <polygon
-                className="cls-1"
-                points="93.65 0 93.65 79.76 381.54 79.76 0 461.3 56.4 517.7 437.94 136.16 437.94 424.05 517.7 424.05 517.7 0 93.65 0"
-              />
-            </svg>
-            <span className=" font-main text-sky-700 dark:text-sky-500 font-bold text-2xl justify-center items-center">
-              Projects
             </span>
           </a>
         </li>
